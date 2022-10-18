@@ -1,13 +1,14 @@
 import Image from 'next/future/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Popover, Transition } from '@headlessui/react'
+import { Popover, Transition, Menu } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.jpg'
 import { Fragment, useEffect, useRef } from 'react'
-
 function CloseIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -22,7 +23,7 @@ function CloseIcon(props) {
     </svg>
   )
 }
-
+/* 
 function ChevronDownIcon(props) {
   return (
     <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
@@ -35,7 +36,7 @@ function ChevronDownIcon(props) {
       />
     </svg>
   )
-}
+} */
 
 function SunIcon(props) {
   return (
@@ -193,8 +194,13 @@ function ModeToggle() {
       window.localStorage.isDarkMode = isDarkMode
     }
   }
-
+  const items = [
+    { name: 'Save and schedule', href: '#' },
+    { name: 'Save and publish', href: '#' },
+    { name: 'Export PDF', href: '#' },
+  ]
   return (
+    <div className="flex flex-row gap-4 items-center">
     <button
       type="button"
       aria-label="Toggle dark mode"
@@ -204,6 +210,49 @@ function ModeToggle() {
       <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
       <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500" />
     </button>
+    <div className="inline-flex rounded-md shadow-sm">
+      <button
+        type="button"
+        className="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+      >
+        EN
+      </button>
+      <Menu as="div" className="-ml-px block">
+        <Menu.Button className="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+          <span className="sr-only">Open options</span>
+          <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+        </Menu.Button>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="absolute right-0 z-10 mt-2 -mr-1 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <div className="py-1">
+              {items.map((item) => (
+                <Menu.Item key={item.name}>
+                  {({ active }) => (
+                    <a
+                      href={item.href}
+                      className={
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700 block px-4 py-2 text-sm'
+                      }
+                    >
+                      {item.name}
+                    </a>
+                  )}
+                </Menu.Item>
+              ))}
+            </div>
+          </Menu.Items>
+        </Transition>
+      </Menu>
+    </div>
+    </div>
   )
 }
 
