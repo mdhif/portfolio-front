@@ -1,5 +1,5 @@
 import Image from 'next/future/image'
-import vangogh from '@/components/images/diffusion/vangogh.png'
+import vangogh from '@/images/diffusion/vangogh.png'
 
 const posts = [
     {
