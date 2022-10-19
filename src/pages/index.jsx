@@ -13,17 +13,17 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg' 
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
-import logoSoGe from '@/images/logos/SoGe.svg'
-import logoEnCoV from '@/images/logos/ENCOV_logo.png'
-import logoTAGHeuer from '@/images/logos/THC.svg'
-import logoENSTA from '@/images/logos/ENSTA.svg'
-import logoENIT from '@/images/logos/ENIT.jpg'
-import avatar from "@/images/avatar.jpg"
+import image1 from '/src/images/photos/image-1.jpg'
+import image2 from '/src/images/photos/image-2.jpg'
+import image3 from '/src/images/photos/image-3.jpg' 
+import image4 from '/src/images/photos/image-4.jpg'
+import image5 from '/src/images/photos/image-5.jpg'
+import logoSoGe from '/src/images/logos/SoGe.svg'
+import logoEnCoV from '/src/images/logos/ENCOV_logo.png'
+import logoTAGHeuer from '/src/images/logos/THC.svg'
+import logoENSTA from '/src/images/logos/ENSTA.svg'
+import logoENIT from '/src/images/logos/ENIT.jpg'
+import avatar from "/src/images/avatar.jpg"
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
@@ -213,7 +213,7 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center aspect-square shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-400/40 dark:ring-0">
-              <Image src={role.logo} alt="" className="scale-90" unoptimized />
+              <Image src={role.logo} alt="" className="scale-90 p-1" unoptimized />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -318,6 +318,7 @@ function Photos() {
     </div>
   )
 }
+
 /* 
 function Blog(){
   return (
@@ -441,7 +442,12 @@ function Blog(){
 )
 } */
 
-import vangogh from '@/images/diffusion/vangogh.png'
+import vangogh from '/src/images/diffusion/vangogh.png'
+import butterfly from '/src/images/diffusion/butterfly.png'
+import selfPortrait from '/src/images/diffusion/artificial intelligence self portrait.png'
+import jazz1 from '/src/images/diffusion/synthwave retro jazz art2.png'
+import selfPortrait2 from '/src/images/diffusion/self_portrait_ai.png'
+
 
 const posts = [
   {
@@ -461,49 +467,49 @@ const posts = [
     },
   },
   {
-    title: 'How to use search engine optimization to drive sales',
+    title: 'AI painter: using stable diffusion to generate art',
     href: '#',
     category: { name: 'Video', href: '#' },
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
     date: 'Mar 10, 2020',
     datetime: '2020-03-10',
-    imageSrc: vangogh,
+    imageSrc: butterfly,
     readingTime: '4 min',
     author: {
       name: 'Brenna Goyette',
       href: '#',
-      imageSrc: vangogh,
+      imageSrc: selfPortrait,
     },
   },
   {
-    title: 'Improve your customer experience',
+    title: 'AI painter: using stable diffusion to generate art',
     href: '#',
     category: { name: 'Case Study', href: '#' },
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
     date: 'Feb 12, 2020',
     datetime: '2020-02-12',
-    imageSrc: vangogh,
+    imageSrc: jazz1,
     readingTime: '11 min',
     author: {
       name: 'Daniela Metz',
       href: '#',
-      imageSrc: vangogh,
+      imageSrc: selfPortrait2,
     },
   },
 ]
 
 function Blog() {
   return (
-    <div className="relative bg-gray-50 px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
+    <div className="relative bg-gray-50/50 dark:bg-zinc-800/20 rounded-3xl px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
       <div className="absolute inset-0">
-        <div className="h-1/3 bg-white sm:h-2/3" />
+        <div className=" bg-white dark:bg-zinc-900" />
       </div>
       <div className="relative mx-auto max-w-7xl">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-zinc-200 sm:text-4xl">From the blog</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 dark:text-zinc-400 sm:mt-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
           </p>
         </div>
@@ -519,7 +525,7 @@ function Blog() {
               />
                 
               </div>
-              <div className="flex flex-1 flex-col justify-between bg-white p-6">
+              <div className="flex flex-1 flex-col justify-between bg-white dark:bg-zinc-900 p-6">
                 <div className="flex-1">
                   <p className="text-sm font-medium text-indigo-600">
                     <a href={post.category.href} className="hover:underline">
@@ -527,8 +533,8 @@ function Blog() {
                     </a>
                   </p>
                   <a href={post.href} className="mt-2 block">
-                    <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                    <p className="mt-3 text-base text-gray-500">{post.description}</p>
+                    <p className="text-xl font-semibold text-gray-900 dark:text-zinc-100">{post.title}</p>
+                    <p className="mt-3 text-base text-gray-500 dark:text-zinc-300/80">{post.description}</p>
                   </a>
                 </div>
                 <div className="mt-6 flex items-center">
@@ -586,7 +592,7 @@ export default function Home({ articles }) {
             Software and Machine Learning Engineer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I am Mohamed Dhif, Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut arcu nec turpis euismod dictum. Sed maximus semper libero. Pellentesque id congue odio, et dictum risus. In volutpat, massa imperdiet scelerisque tempor, ligula risus consequat ante, ut tincidunt velit erat id nulla. Maecenas id ultricies orci, non rhoncus lacus. Fusce ullamcorper ac mi nec cursus. Suspendisse vestibulum efficitur porta. Curabitur ex lacus, varius sit amet est eu, viverra congue tellus. Proin ac posuere nunc.  ...
+          I am Mohamed Dhif, Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut arcu nec turpis euismod dictum. Sed maximus semper libero. Pellentesque id congue odio, et dic.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
