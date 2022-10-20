@@ -6,6 +6,7 @@ import logoEnCoV from '/src/images/logos/ENCOV_logo.png'
 import logoTAGHeuer from '/src/images/logos/THC.svg'
 import logoENSTA from '/src/images/logos/ENSTA.svg'
 import logoENIT from '/src/images/logos/ENIT.jpg'
+import logoAWS from '/src/images/logos/AWS.svg'
 
 import { 
     BriefcaseIcon,
@@ -16,7 +17,7 @@ import {
 let resume = [
     {
       company: 'Societe Generale',
-      title: 'Machine Learning and Data Science Consultant',
+      title: 'Machine Learning Consultant',
       logo: logoSoGe,
       start: '2022',
       end: {

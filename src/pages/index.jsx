@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import { Container } from '@/components/Container'
 import { Intro } from '@/components/Intro'
 import { Resume } from '@/components/Resume'
@@ -8,11 +7,9 @@ import { NewsLetter } from '@/components/Newsletter'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 
-
 export default function Home({ articles }) {
   return (
     <>
-      
       {/* Header section  */}
       <Head>
         <title>
