@@ -28,14 +28,14 @@ const posts = [
     },
   },
   {
-    title: 'AI painter: using stable diffusion to generate art',
+    title: 'AI Narrator: using to generate audiobooks from text files.',
     href: '#',
-    category: { name: 'Video', href: '#' },
+    category: { name: 'Demo', href: '#' },
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
+      'If you wish to turn your pdf into an audiobook, you are in the right place.',
     date: 'Mar 10, 2020',
     datetime: '2020-03-10',
-    imageSrc: butterfly,
+    imageSrc: jazz1,
     readingTime: '4 min',
     author: {
       name: 'Brenna Goyette',
@@ -44,14 +44,14 @@ const posts = [
     },
   },
   {
-    title: 'AI painter: using stable diffusion to generate art',
+    title: 'What is MLOps ?',
     href: '#',
     category: { name: 'Case Study', href: '#' },
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
+      'MLOps is DevOps for ML Engineers, but what does that mean ?',
     date: 'Feb 12, 2020',
     datetime: '2020-02-12',
-    imageSrc: jazz1,
+    imageSrc: butterfly,
     readingTime: '11 min',
     author: {
       name: 'Daniela Metz',
@@ -59,6 +59,7 @@ const posts = [
       imageSrc: selfPortrait2,
     },
   },
+  
 ]
 
 export function Blog() {

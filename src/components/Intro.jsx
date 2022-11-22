@@ -16,7 +16,9 @@ export function Intro(props){
                 Software and Machine Learning Engineer.
             </h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I am Mohamed Dhif, Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut arcu nec turpis euismod dictum. Sed maximus semper libero. Pellentesque id congue odio, et dic.
+            Hi, my name is Mohamed Dhif and I love building AI-powered software experiences. Through this website I hope to share with you demos and POCs for my personal projects as well as my thoughts and advice about ML software development</p>
+            <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
+            If you are curious about the field of Machine Learning and would like to learn  more about it then this is the right place for you.
             </p>
             <div className="mt-6 flex gap-6">
                 <SocialLink

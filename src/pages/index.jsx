@@ -17,7 +17,7 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I'm Mohamed Dhif, Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut arcu nec turpis euismod dictum. Sed maximus semper libero. Pellentesque id congue odio, et dictum risus. In volutpat, massa imperdiet scelerisque tempor, ligula risus consequat ante, ut tincidunt velit erat id nulla. Maecenas id ultricies orci, non rhoncus lacus. Fusce ullamcorper ac mi nec cursus. Suspendisse vestibulum efficitur porta. Curabitur ex lacus, varius sit amet est eu, viverra congue tellus. Proin ac posuere nunc.  ..."
+          content="Mohamed Dhif Machine Learning AI Engineer Consultant software developpers "
         />
       </Head>
 
