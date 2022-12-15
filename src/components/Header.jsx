@@ -7,7 +7,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import avatarImage from '@/images/avatar.jpg'
+import avatarImage from '@/images/avatar2.png'
 import { Fragment, useEffect, useRef } from 'react'
 function CloseIcon(props) {
   return (
@@ -316,7 +316,7 @@ export function Header() {
       }
 
       let fromScale = 1
-      let toScale = 36 / 64
+      let toScale = 0.5
       let fromX = 0
       let toX = 2 / 16
 

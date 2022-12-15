@@ -21,7 +21,7 @@ export function Intro(props){
             If you are curious about the field of Machine Learning and would like to learn  more about it then this is the right place for you.
             </p>
             <div className="mt-6 flex gap-6">
-                <SocialLink
+                {/* <SocialLink
                 href="https://twitter.com"
                 aria-label="Follow on Twitter"
                 icon={TwitterIcon}
@@ -30,14 +30,14 @@ export function Intro(props){
                 href="https://instagram.com"
                 aria-label="Follow on Instagram"
                 icon={InstagramIcon}
-                />
+                /> */}
                 <SocialLink
-                href="https://github.com"
+                href="https://github.com/mdhif"
                 aria-label="Follow on GitHub"
                 icon={GitHubIcon}
                 />
                 <SocialLink
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/mohamed-dhif/"
                 aria-label="Follow on LinkedIn"
                 icon={LinkedInIcon}
                 />
