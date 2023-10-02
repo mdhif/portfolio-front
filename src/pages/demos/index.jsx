@@ -7,7 +7,7 @@ import { formatDate } from '@/lib/formatDate'
 
 function Demo({ demo }) {
   return (
-    <demo className="md:grid md:grid-cols-4 md:items-baseline">
+    <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
         <Card.Title href={`/demos/${demo.slug}`}>
           {demo.title}
@@ -30,7 +30,7 @@ function Demo({ demo }) {
       >
         {formatDate(demo.date)}
       </Card.Eyebrow>
-    </demo>
+    </article>
   )
 }
 

@@ -10,14 +10,6 @@ export function Welcome({onAnimationComplete}) {
         ],
         delaySpeed: 2000,
     })
-    const [animationCompleted, setAnimationCompleted] = useState(false);
-
-    const handleAnimationComplete = () => {
-        console.log("animation complete")
-        setAnimationCompleted(true);
-        onAnimationComplete(); //
-    };
-
   return (
     <motion.div 
     initial={{
@@ -36,7 +28,7 @@ export function Welcome({onAnimationComplete}) {
         delay: 3,
         duration:2,    
     }}
-    onAnimationComplete={handleAnimationComplete} // Call the handler on animation completion
+    onAnimationComplete={onAnimationComplete} // Call the handler on animation completion
     className='h-screen flex flex-col space-y-8 items-center justify-center
     text-center overflow-hidden'>
         <BackgroundCircles/>

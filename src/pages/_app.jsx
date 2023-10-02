@@ -16,16 +16,12 @@ function usePrevious(value) {
   return ref.current
 }
 
+let animationComplete = false
+
 function welcome(pathname) {
-  const [isAnimationCompleted, setIsAnimationCompleted] = useState(false);
-
-  const handleAnimationComplete = () => {
-    setIsAnimationCompleted(true);
-  };
-
-  return pathname =='/' && !isAnimationCompleted ? 
+  return pathname =='/' && !animationComplete ? 
     <div className="relative z-50">
-      <Welcome onAnimationComplete={handleAnimationComplete}/>
+      <Welcome onAnimationComplete={()=>{animationComplete = true; console.log("animation complete")}}/>
     </div>
   : <div/>
 }
