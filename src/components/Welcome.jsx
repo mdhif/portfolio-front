@@ -1,15 +1,23 @@
 import {Cursor, useTypewriter} from 'react-simple-typewriter'
 import BackgroundCircles from '@/components/BackgroundCircles'
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
-
-export function Welcome() {
+export function Welcome({onAnimationComplete}) {
     const [text, count] = useTypewriter({
         words: [
             "Welcome to my website !",
         ],
         delaySpeed: 2000,
     })
+    const [animationCompleted, setAnimationCompleted] = useState(false);
+
+    const handleAnimationComplete = () => {
+        console.log("animation complete")
+        setAnimationCompleted(true);
+        onAnimationComplete(); //
+    };
+
   return (
     <motion.div 
     initial={{
@@ -28,6 +36,7 @@ export function Welcome() {
         delay: 3,
         duration:2,    
     }}
+    onAnimationComplete={handleAnimationComplete} // Call the handler on animation completion
     className='h-screen flex flex-col space-y-8 items-center justify-center
     text-center overflow-hidden'>
         <BackgroundCircles/>

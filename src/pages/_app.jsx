@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react'
-
+import { useEffect, useRef, useState } from 'react'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Welcome } from '@/components/Welcome'
@@ -18,10 +17,15 @@ function usePrevious(value) {
 }
 
 function welcome(pathname) {
-  
-  return pathname =='/' ? 
+  const [isAnimationCompleted, setIsAnimationCompleted] = useState(false);
+
+  const handleAnimationComplete = () => {
+    setIsAnimationCompleted(true);
+  };
+
+  return pathname =='/' && !isAnimationCompleted ? 
     <div className="relative z-50">
-        <Welcome/>    
+      <Welcome onAnimationComplete={handleAnimationComplete}/>
     </div>
   : <div/>
 }
