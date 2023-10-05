@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a95c7841-084e-4193-a658-e4af1fb51f31/deploy-status)](https://app.netlify.com/sites/mdhif/deploys)
+
 # Website for my personal projects portfolio
 
 This website is built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
