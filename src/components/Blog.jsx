@@ -4,8 +4,8 @@ import Image from 'next/future/image'
 
 import vangogh from '/src/images/diffusion/vangogh.png'
 import butterfly from '/src/images/diffusion/butterfly.png'
-import selfPortrait from '/src/images/diffusion/artificial intelligence self portrait.png'
-import jazz1 from '/src/images/diffusion/synthwave retro jazz art2.png'
+import selfPortrait from '/src/images/diffusion/artificial_intelligence_self_portrait.png'
+import jazz1 from '/src/images/diffusion/synthwave_retro_jazz_art2.png'
 import selfPortrait2 from '/src/images/diffusion/self_portrait_ai.png'
 import avatar from "@/images/avatar.jpg"
 
