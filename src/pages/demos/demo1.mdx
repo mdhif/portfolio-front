@@ -1,5 +1,6 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
-
+import { InputComponent } from '@/components/InputComponent'
+import { NewsLetter } from '@/components/InputComponent'
 export const meta = {
   author: 'Mohamed Dhif',
   date: '2023-10-02',
@@ -8,9 +9,9 @@ export const meta = {
     'This demo showcases the power of the state of the art models in Text / Speech',
 }
 
-export default (props) => <ArticleLayout meta={meta} {...props} />
+export default (props) => <ArticleLayout meta={meta} {...props}/>
 
-
+<NewsLetter/>
 
 ```js
 import { animate } from '@planetaria/animaginary'
