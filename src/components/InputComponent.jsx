@@ -12,7 +12,7 @@ export function InputComponent(props) {
 
     try {
       // Send a POST request to your FastAPI backend (specify the full URL)
-      const response = await fetch('http://35.180.61.36/api/tts', { // Adjust the URL
+      const response = await fetch('/api/tts', { // Adjust the URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
