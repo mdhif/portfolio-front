@@ -1,0 +1,37 @@
+# State of the art for Speech to Text generative models
+
+As of late 2023, I am trying to check the state of the art in speech to text 
+generative models.
+
+I am intending to build a small application / demo using the best of the existing models.
+
+My process to research the state of the art in a given subject is to look at the most downloaded 
+models in huggingface, to read the litterature around them and to look at paperswithcode.com as they provide 
+the top performers for each subject.
+
+I started out by using the T5-Speech model from microsoft. A newer Transformer-based model that considers both speech
+and text to be interchangeable and tries to encode them in a common latent space using multiple pre and post processing networks.
+
+![Speech-T5 Architecture](https://github.com/microsoft/SpeechT5/raw/main/SpeechT5/speecht5_framework.png)
+
+After trying it out and managing to have a working demo using it, I found that the voice sounded robotic and that I had very little 
+control over the voice characteristics.
+
+Speech-T5 is inteded to be a generalist model that can be used for many different tasks. What I needed is just a TTS model where I could have 
+control over the reading voice.
+
+I kept looking and I found coqui TTS. A TTS library that is basically a compilation of the best TTS models available. I tried their best model, XTTS2 and it was
+surprisingly easy to use with high quality output and I can easily do voice cloning using a short sequence or sample.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/coqui-ai/TTS/main/images/coqui-log-green-TTS.png" width="200"/>
+</p>
+
+It is also going to allow me to compare all the top models and that is what I intend to do in a second part of this article.
+
+# Benchmark of top TTS models:
+
+
+
+
+
