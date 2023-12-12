@@ -1,7 +1,18 @@
-# State of the art for Speech to Text generative models
+import { ArticleLayout } from '@/components/ArticleLayout'
+import { InputComponent } from '@/components/InputComponent'
 
-As of late 2023, I am trying to check the state of the art in speech to text 
-generative models.
+export const meta = {
+  author: 'Mohamed Dhif',
+  date: '2023-12-12',
+  title: 'State of the art for Speech to Text generative models',
+  description:
+    'State of the art in speech to text generative models',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+
+# State of the art for Speech to Text generative models
 
 I am intending to build a small application / demo using the best of the existing models.
 
@@ -16,6 +27,9 @@ and text to be interchangeable and tries to encode them in a common latent space
 
 After trying it out and managing to have a working demo using it, I found that the voice sounded robotic and that I had very little 
 control over the voice characteristics.
+
+<InputComponent/>
+
 
 Speech-T5 is inteded to be a generalist model that can be used for many different tasks. What I needed is just a TTS model where I could have 
 control over the reading voice.
